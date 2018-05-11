@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
 import html2canvas from 'html2canvas';
 import FileSaver from 'file-saver';
-import './Form.css';
+import './Page.css';
 
-class Form extends Component {
+class Page extends Component {
     constructor (props) {
         super(props);
         this.handleUserInput = this.handleUserInput.bind(this);
@@ -53,7 +53,7 @@ class Form extends Component {
 
         html2canvas(document.querySelector("#root"))
             .then(canvas => { canvas.toBlob(blob => {
-                FileSaver.saveAs(blob, 'file.txt')
+                FileSaver.saveAs(blob, 'file.png')
             })})
             .catch(err => {
             console.error('oops, something went wrong!', err);
@@ -133,4 +133,4 @@ class Form extends Component {
     }
 }
 
-export default Form;
+export default Page;
