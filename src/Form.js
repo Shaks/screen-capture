@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import html2canvas from 'html2canvas';
-import domtoimage from 'dom-to-image';
 import FileSaver from 'file-saver';
 import './Form.css';
 
